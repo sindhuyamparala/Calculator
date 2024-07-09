@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            margin-top: 50px;
+            background-color: #e7c9f3;
+            text-align: center;
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        input {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #6a1b9a;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #4a148c;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function add() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var result = num1 + num2;
+            document.getElementById('result').innerHTML = num1 + ' + ' + num2 + ' = ' + result;
+        }
+        function sub() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var result = num1 - num2;
+            document.getElementById('result').innerHTML = num1 + ' - ' + num2 + ' = ' + result;
+        }
+        function mul() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var result = num1 * num2;
+            document.getElementById('result').innerHTML = num1 + ' * ' + num2 + ' = ' + result;
+        }
+        function div() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var result = num1 / num2;
+            document.getElementById('result').innerHTML = num1 + ' / ' + num2 + ' = ' + result;
+        }
+    </script>
+</head>
+<body>
+    <h2><u>Calculator</u></h2>
+    <p>Enter the numbers</p>
+    <label for="num1">Number 1:</label>
+    <input type="number" id="num1">
+    <label for="num2">Number 2:</label>
+    <input type="number" id="num2">
+    <br><br>
+    <button onclick="add()">ADD</button>
+    <button onclick="sub()">SUBTRACT</button>
+    <button onclick="mul()">MULTIPLY</button>
+    <button onclick="div()">DIVIDE</button>
+    <br>
+    <p id="result"></p>
+</body>
+</html>
